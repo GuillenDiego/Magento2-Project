@@ -1,6 +1,7 @@
 # Magento2-Project
 Deploying magento on ec2 and utilizing APIs
-# Disabling restart prompt
+# Deployment commands
+Disabling restart prompt
 ```
 sudo mv /etc/apt/apt.conf.d/99needrestart /home/ubuntu/99needrestart
 ```
