@@ -23,19 +23,19 @@ sudo apt-get -y install nginx
 sudo apt-get -y install php7.2-fpm php7.2-cli
 ```
 ```
-sed -i 's/^memory_limit..*/memory_limit = 2G/' /etc/php/7.2/fpm/php.ini
+sudo sed -i 's/^memory_limit..*/memory_limit = 2G/' /etc/php/7.2/fpm/php.ini
 ```
 ```
-sed -i 's/^max_execution_time..*/max_execution_time = 1800/' /etc/php/7.2/fpm/php.ini
+sudo sed -i 's/^max_execution_time..*/max_execution_time = 1800/' /etc/php/7.2/fpm/php.ini
 ```
 ```
-sed -i 's/^zlib.output_compression..*/zlib.output_compression = On/' /etc/php/7.2/fpm/php.ini
+sudo sed -i 's/^zlib.output_compression..*/zlib.output_compression = On/' /etc/php/7.2/fpm/php.ini
 ```
 ```
-systemctl restart php7.2-fpm
+sudo systemctl restart php7.2-fpm
 ```
 ```
-apt -y install mysql-server
+sudo apt -y install mysql-server
 ```
 
 The complete Script
@@ -50,10 +50,10 @@ sudo apt-add-repository -y ppa:ondrej/php
 sudo apt-get update -qq
 sudo apt-get -y install nginx
 sudo apt-get -y install php7.2-fpm php7.2-cli
-sed -i 's/^memory_limit..*/memory_limit = 2G/' /etc/php/7.2/fpm/php.ini
-sed -i 's/^max_execution_time..*/max_execution_time = 1800/' /etc/php/7.2/fpm/php.ini
-sed -i 's/^zlib.output_compression..*/zlib.output_compression = On/' /etc/php/7.2/fpm/php.ini
-systemctl restart php7.2-fpm
-apt -y install mysql-server
+sudo sed -i 's/^memory_limit..*/memory_limit = 2G/' /etc/php/7.2/fpm/php.ini
+sudo sed -i 's/^max_execution_time..*/max_execution_time = 1800/' /etc/php/7.2/fpm/php.ini
+sudo sed -i 's/^zlib.output_compression..*/zlib.output_compression = On/' /etc/php/7.2/fpm/php.ini
+sudo systemctl restart php7.2-fpm
+sudo apt -y install mysql-server
 
 ```
