@@ -55,5 +55,10 @@ sudo sed -i 's/^max_execution_time..*/max_execution_time = 1800/' /etc/php/7.2/f
 sudo sed -i 's/^zlib.output_compression..*/zlib.output_compression = On/' /etc/php/7.2/fpm/php.ini
 sudo systemctl restart php7.2-fpm
 sudo apt -y install mysql-server
+cd /var/www/html
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
+composer create-project --repository=https://repo.magento.com/ magento/project-community-edition magento
+
+
 
 ```
